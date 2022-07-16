@@ -558,22 +558,9 @@ body::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-@supports ((-moz-column-gap: clamp( 0.9375rem , 0.9375rem  +  0vw , 0.9375rem )) or (column-gap: clamp( 0.9375rem , 0.9375rem  +  0vw , 0.9375rem ))) {
-  .social-items {
-    -webkit-column-gap: clamp( 0.9375rem , 0.9375rem  +  0vw , 0.9375rem );
-       -moz-column-gap: clamp( 0.9375rem , 0.9375rem  +  0vw , 0.9375rem );
-            column-gap: clamp( 0.9375rem , 0.9375rem  +  0vw , 0.9375rem );
-  }
-}
-
-@supports not ((-moz-column-gap: clamp( 0.9375rem , 0.9375rem  +  0vw , 0.9375rem )) or (column-gap: clamp( 0.9375rem , 0.9375rem  +  0vw , 0.9375rem ))) {
-  .social-items {
-    -webkit-column-gap: calc(0.9375rem + 0 * (100vw - 20rem) / 50.625);
-       -moz-column-gap: calc(0.9375rem + 0 * (100vw - 20rem) / 50.625);
-            column-gap: calc(0.9375rem + 0 * (100vw - 20rem) / 50.625);
-  }
+  -webkit-column-gap: 15px;
+     -moz-column-gap: 15px;
+          column-gap: 15px;
 }
 
 .credits {
@@ -1234,6 +1221,10 @@ body::after {
           flex: 0 1 50%;
 }
 
+.mailing {
+  padding-bottom: 110px;
+}
+
 @supports (padding-top: clamp( 2.5rem , 0.7716049383rem  +  8.6419753086vw , 6.875rem )) {
   .mailing {
     padding-top: clamp( 2.5rem , 0.7716049383rem  +  8.6419753086vw , 6.875rem );
@@ -1243,18 +1234,6 @@ body::after {
 @supports not (padding-top: clamp( 2.5rem , 0.7716049383rem  +  8.6419753086vw , 6.875rem )) {
   .mailing {
     padding-top: calc(2.5rem + 4.375 * (100vw - 20rem) / 50.625);
-  }
-}
-
-@supports (padding-bottom: clamp( 6.875rem , 6.875rem  +  0vw , 6.875rem )) {
-  .mailing {
-    padding-bottom: clamp( 6.875rem , 6.875rem  +  0vw , 6.875rem );
-  }
-}
-
-@supports not (padding-bottom: clamp( 6.875rem , 6.875rem  +  0vw , 6.875rem )) {
-  .mailing {
-    padding-bottom: calc(6.875rem + 0 * (100vw - 20rem) / 50.625);
   }
 }
 
@@ -1635,20 +1614,9 @@ body::after {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding-top: 50px;
     row-gap: 30px;
   }
-
-@supports (padding-top: clamp( 3.125rem , 3.125rem  +  0vw , 3.125rem )) {
-    .menu__list {
-      padding-top: clamp( 3.125rem , 3.125rem  +  0vw , 3.125rem );
-    }
-}
-
-@supports not (padding-top: clamp( 3.125rem , 3.125rem  +  0vw , 3.125rem )) {
-    .menu__list {
-      padding-top: calc(3.125rem + 0 * (100vw - 20rem) / 50.625);
-    }
-}
 
   .menu__link {
     color: #fff;
